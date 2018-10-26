@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <style>
+        #app div{
+            display: none;}
+        .active{color:red}
+    </style>
+</head>
+<body>
+<div id="app">
+    <button v-for="item,i in data" v-bind:class="{active:i==index}" @click="tab(i)">{{item.title}}</button>
+    <div v-for="item,i in data" v-bind:style="{display:i==index ? 'block':'none'}">
+        <p v-for="con,j in item.con.contitle">{{con}}</p>
+    </div>
+</div>
+
+<script>
+    var data=[
+        {
+            title:'新闻',
+            con:{
+                id:11,
+                contitle:['习近平来深圳访问','美国和中国贸易战结束']
+            }
+        },
+        {
+            title:'娱乐',
+            con:{
+                id:11,
+                contitle:['范冰冰','李冰冰']
+            }
+        },
+        {
+            title:'体育',
+            con:{
+                id:11,
+                contitle:['国足进决赛','国足60分钟不射']
+            }
+        }
+    ]
+    new Vue({
+       el:'#app',
+       data:{
+           data,
+           index:0
+       },
+       methods:{
+           tab(i){
+               this.index=i;
+           }
+       }
+    })
+
+</script>
+</body>
+</html>

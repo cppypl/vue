@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>VUE学习</title>
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+
+    <input  type="text"  v-model="val" />
+    <input type="button" value="提交" @click="submit">
+    {{val}}
+    <ul>
+        <li v-for="item in list">{{item.con}}</li>
+    </ul>
+</div>
+<script>
+    var msg='hello world!';
+
+    var vm=new Vue({
+        el:"#app",
+        data:{
+            list:[
+                {
+                    id:123,
+                    con:'今天学习vue！'
+                }
+            ],
+            val:''
+        },
+        methods:{
+            submit(){
+               vm.list.push({
+                   id:Date.now(),
+                   con:vm.val
+               })
+                vm.val=''
+            }
+        }
+
+    })
+
+
+</script>
+</body>
+</html>
