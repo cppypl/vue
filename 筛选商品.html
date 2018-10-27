@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <style>
+        #app{width: 700px; margin: 50px auto}
+        section{  margin: 0 auto;clear: both; background: #eee; border: 1px #ddd solid; padding: 20px}
+        section ul{ display: inline}
+        section li{ display: inline-block; padding: 10px; cursor: pointer}
+        section li.active{color: #f60}
+        .selectList{ height: 50px; }
+        .selectList span{ background: #f60; color: #fff; padding: 5px 20px; border: 1px #ddd solid; margin: 10px;position: relative;}
+        .selectList span a{position: absolute; right: 5px; color: #000; text-decoration: none}
+    </style>
+</head>
+<body>
+<div id="app">
+    <div class="selectList">
+        已选：
+        <span v-for="item,key in chooseList">{{item}}<a href="javascript:"  @click="remove(key)">X</a></span>
+    </div>
+
+    <section v-for="item,index in dataList">
+        {{item.title}}：
+        <ul>
+            <li v-for='option,i in item.con' @click="choose(index,i,option)" v-bind:class="{active:item.index==i}">{{option}}</li>
+
+        </ul>
+    </section>
+
+
+</div>
+
+<script>
+
+    let dataList=[
+        {
+            title:'品牌',
+            con:['苹果','华为','小米','OPPO','VIVO']
+        },
+        {
+            title:'尺寸',
+            con:['5寸以下','5-6寸','6-8寸','8-10寸','10寸以上']
+        },
+        {
+            title:'价格',
+            con:['1000以下','1000-2000','2000-3000','3000-4000','4000以上']
+        },
+        {
+            title:'网络',
+            con:['3G','4G','5G','移动','联通']
+        }
+    ];
+    dataList.forEach(item => item.index=-1);//给后台调用的数据加上index
+
+    new Vue({
+        el:'#app',
+        data:{
+            dataList,
+            chooseList:{
+            }
+        },
+        methods:{
+            choose(index,i,value){
+                this.$set(this.chooseList,index,value);   //this.$set 是VUE的原型方法，设置新的对象数据，传入3个参数this.$set（老对象,KEY值,新数据）
+                this.dataList[index].index=i;
+            },
+            remove(key){
+                this.$delete(this.chooseList,key);//this.delete 是VUE的原型方法，删除指定的对象数据，传入2个参数this.$set（老对象,要删的KEY值）
+                this.dataList[key].index=-1;
+            }
+        }
+    })
+
+</script>
+</body>
+</html>

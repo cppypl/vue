@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        section{background: #333; width: 600px; margin: 0 auto; color: #fff; padding: 20px}
+        section span{ display: block;  background: #666; padding: 10px 20px}
+        section p{  border-bottom: 1px #ddd dashed; padding: 10px 20px; margin: 0 ; color: #000 }
+        section .box{background: #999}
+    </style>
+</head>
+<body>
+<div id="app">
+    <section v-for="item,i in dataList">
+        <span @click="show(i)">{{item.title}}</span>
+        <div class="box" :style="{display:i==index? 'block':'none'}">
+            <p v-for="option in item.con">{{option}}</p>
+
+        </div>
+    </section>
+
+</div>
+
+<script>
+    let dataList=[
+        {
+            title:'品牌',
+            con:['苹果','华为','小米','OPPO','VIVO']
+        },
+        {
+            title:'尺寸',
+            con:['5寸以下','5-6寸','6-8寸','8-10寸','10寸以上']
+        },
+        {
+            title:'价格',
+            con:['1000以下','1000-2000','2000-3000','3000-4000','4000以上']
+        },
+        {
+            title:'网络',
+            con:['3G','4G','5G','移动','联通']
+        }
+    ];
+    new Vue({
+        el:"#app",
+        data:{
+            dataList,
+            index:'-1'
+        },
+        methods:{
+            show(i){
+                this.index=i==this.index?'-1':i;  //如果点击的是同一个，则index=-1
+            }
+        }
+    })
+</script>
+</body>
+</html>
