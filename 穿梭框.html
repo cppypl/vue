@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        *{            margin: 0; padding: 0}
+        #app{width: 1200px; margin: 50px auto}
+        li{list-style: none; line-height: 30px}
+        .box{border: 1px #ddd solid;float: left; padding: 20px; min-width: 400px}
+        .box .head{border-bottom: 1px #ddd solid; padding: 10px 0}
+        .box .head span{            float: right;}
+        .center{ display: inline-block;float: left; margin:50px;}
+        .center p{ padding: 10px;     color:#999;        border: 1px #ddd solid; margin: 10px; cursor: pointer }
+        .center p:hover{background-color: #eee}
+    </style>
+</head>
+<body>
+
+    <div id="app">
+        <pl_box title="原列表" :data="originList" ></pl_box>
+        <div class="center">
+            <p @click="goLeft"> <= </p>
+            <p @click="goRight"> => </p>
+        </div>
+        <pl_box title="目标列表" :data="targetList" ></pl_box>
+
+    </div>
+
+<script>
+
+    Vue.component('pl_box',{
+        props:['title','data'],
+        template:`
+            <div class="box">
+                {{all_check}}
+                <div class="head">
+                    <input type="checkbox" v-model="all_check" @click="all_handle"> {{title}}
+                    <span> {{checkdCount}} / {{data.length}}</span>
+                </div>
+                <div class="con">
+                    <ul>
+                        <li v-for="item in data"><label><input type="checkbox" v-model="item.checked"> {{item.title}}</label></li>
+
+                    </ul>
+                </div>
+            </div>
+        `,
+        data(){
+            return {
+                all_check:''
+            }
+        },
+        computed:{
+            checkdCount(){
+                return this.data.filter( item => item.checked==true).length
+            }
+        },
+        methods:{
+            all_handle(){
+                this.data.map(item => item.checked=!this.all_check)
+            }
+        }
+    });
+
+    var dataList={
+        originList:[
+            {
+                title:'原列表1',
+                checked:false
+            },
+            {
+                title:'原列表2',
+                checked:false
+            },
+            {
+                title:'原列表3',
+                checked:false
+            }
+        ],
+        targetList:[
+            {
+                title:'目标列表1',
+                checked:false
+            },
+            {
+                title:'目标列表2',
+                checked:true
+            },
+            {
+                title:'目标列表3',
+                checked:true
+            }
+        ]
+    }
+    var vm =new Vue({
+        el:"#app",
+        data:{
+            ...dataList
+        },
+        methods:{
+
+            goLeft(){
+                var pushData=this.targetList.filter(item => item.checked).map(item => {
+                    return {//return一个新的对象，免得影响targetList的选中
+                        ...item,
+                        checked:false
+                    }
+                });
+                this.originList.push(...pushData);//因为push进来的是数组，...解构赋值分解成对象
+                this.targetList=this.targetList.filter(item => !item.checked)
+            },
+            goRight(){
+                var pushData=this.originList.filter(item => item.checked).map(item => {
+                    return {//return一个新的对象，免得影响targetList的选中
+                        ...item,
+                        checked:false
+                    }
+                });
+                this.targetList.push(...pushData);//因为push进来的是数组，...解构赋值分解成对象
+                this.originList=this.originList.filter(item => !item.checked);
+            }
+        }
+    });
+</script>
+</body>
+</html>

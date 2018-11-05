@@ -2,6 +2,7 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/VUE选项卡.html" line="47" mnemonic="3" />
+    <bookmark url="file://$PROJECT_DIR$/网友的面试题.html" line="11" mnemonic="5" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="890311ff-5ac7-40f5-992f-4fbc574aef75" name="默认的" comment="" />
@@ -18,20 +19,24 @@
     <session id="-1443312609">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
+          <entry key="project.closed" value="7" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.1" value="2" />
+          <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.6" value="2" />
-          <entry key="project.open.time.8" value="2" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.8" value="3" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.opened" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="css" value="1" />
           <entry key="gitattributes" value="1" />
-          <entry key="html" value="5" />
+          <entry key="html" value="12" />
+          <entry key="js" value="2" />
           <entry key="json" value="1" />
           <entry key="md" value="1" />
           <entry key="rnc" value="1" />
@@ -40,8 +45,10 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="5" />
+          <entry key="CSS" value="1" />
+          <entry key="HTML" value="12" />
           <entry key="JSON" value="1" />
+          <entry key="JavaScript" value="2" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="RNG Compact" value="1" />
           <entry key="TypeScript" value="1" />
@@ -49,12 +56,16 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="8141" />
+          <entry key="css" value="75" />
+          <entry key="html" value="14831" />
+          <entry key="js" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="8141" />
+          <entry key="CSS" value="75" />
+          <entry key="HTML" value="14831" />
+          <entry key="JavaScript" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
@@ -67,19 +78,13 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/简易留言板.html">
+        <entry file="file://$PROJECT_DIR$/VUE-todoList.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="775">
-              <caret line="31" column="18" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/VUE选项卡.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+            <state relative-caret-position="630">
+              <caret line="151" column="20" selection-start-line="151" selection-start-column="12" selection-end-line="151" selection-end-column="20" />
+              <folding>
+                <element signature="e#1448#1853#2" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -87,26 +92,92 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/筛选商品.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1825">
-              <caret line="73" column="13" lean-forward="true" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
+            <state relative-caret-position="570">
+              <caret line="56" column="12" selection-start-line="56" selection-start-column="4" selection-end-line="56" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/收缩展开的好友列表.html">
+        <entry file="file://D:/各种安装包/《案例+-+Vue.js+打造微云文件管理系统》公开课/《案例 - Vue.js 打造微云文件管理系统》公开课/index.html.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1200">
-              <caret line="48" column="22" lean-forward="true" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
+            <state relative-caret-position="621">
+              <caret line="220" column="22" lean-forward="true" selection-start-line="220" selection-start-column="22" selection-end-line="220" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://D:/各种安装包/《案例+-+Vue.js+打造微云文件管理系统》公开课/《案例 - Vue.js 打造微云文件管理系统》公开课/js/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="696">
+              <caret line="91" column="91" selection-start-line="91" selection-start-column="87" selection-end-line="91" selection-end-column="91" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/封装组件-模态框.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="821">
+              <caret line="35" column="23" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/封装组件-tips.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="821">
+              <caret line="55" column="48" selection-start-line="55" selection-start-column="48" selection-end-line="55" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/网友的面试题.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="700">
+              <caret line="28" column="120" selection-start-line="28" selection-start-column="96" selection-end-line="28" selection-end-column="120" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/穿梭框.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="125">
+              <caret line="5" selection-start-line="5" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/index.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="665">
+              <caret line="569" column="18" selection-start-line="569" selection-start-column="18" selection-end-line="569" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/VUE-todoList.html">
+        <entry file="file://$PROJECT_DIR$/微云.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="221" column="42" selection-start-line="221" selection-start-column="42" selection-end-line="221" selection-end-column="42" />
+            <state relative-caret-position="471">
+              <caret line="285" column="35" lean-forward="true" selection-start-line="285" selection-start-column="35" selection-end-line="285" selection-end-column="35" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#2;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -120,6 +191,16 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>allCheck</find>
+      <find>act</find>
+      <find>labelicon-checkbox-act.svg</find>
+      <find>MIMEMAPS</find>
+      <find>toggle</find>
+      <find>all_check</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -131,7 +212,14 @@
         <option value="$PROJECT_DIR$/VUE选项卡.html" />
         <option value="$PROJECT_DIR$/收缩展开的好友列表.html" />
         <option value="$PROJECT_DIR$/筛选商品.html" />
+        <option value="$PROJECT_DIR$/网友的面试题.html" />
         <option value="$PROJECT_DIR$/VUE-todoList.html" />
+        <option value="$PROJECT_DIR$/封装组件-模态框.html" />
+        <option value="$PROJECT_DIR$/封装组件-tips.html" />
+        <option value="$PROJECT_DIR$/穿梭框.html" />
+        <option value="D:/各种安装包/《案例+-+Vue.js+打造微云文件管理系统》公开课/《案例 - Vue.js 打造微云文件管理系统》公开课/js/index.js" />
+        <option value="$PROJECT_DIR$/css/index.css" />
+        <option value="$PROJECT_DIR$/微云.html" />
       </list>
     </option>
   </component>
@@ -147,7 +235,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="347" />
     <option name="y" value="49" />
     <option name="width" value="1400" />
@@ -185,6 +273,11 @@
               <item name="vue" type="b2602c69:ProjectViewProjectNode" />
               <item name="vue" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="vue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vue" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -196,7 +289,7 @@
     <property name="SearchEverywhereHistoryKey" value="o&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="8.12.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../My-blog" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.path.for.package.stylelint" value="project" />
     <property name="node.js.selected.package.stylelint" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -204,6 +297,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
     <property name="ts.external.directory.path" value="H:\soft\WebStorm 2018.2.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="H:\Development\Project\vue" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -217,14 +315,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.VUE-todoList.html">
+  <component name="RunManager" selected="JavaScript Debug.微云.html">
+    <configuration name="封装组件-模态框.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/vue/封装组件-模态框.html">
+      <method v="2" />
+    </configuration>
+    <configuration name="封装组件-tips.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/vue/封装组件-tips.html">
+      <method v="2" />
+    </configuration>
     <configuration name="VUE-todoList.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/vue/VUE-todoList.html">
       <method v="2" />
     </configuration>
-    <configuration name="VUE选项卡.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/vue/VUE选项卡.html">
+    <configuration name="穿梭框.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/vue/穿梭框.html">
       <method v="2" />
     </configuration>
-    <configuration name="简易留言板.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/vue/简易留言板.html">
+    <configuration name="微云.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/vue/微云.html">
+      <method v="2" />
+    </configuration>
+    <configuration name="网友的面试题.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/vue/网友的面试题.html">
       <method v="2" />
     </configuration>
     <configuration name="筛选商品.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/vue/筛选商品.html">
@@ -234,15 +341,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JavaScript Debug.简易留言板.html" />
-      <item itemvalue="JavaScript Debug.VUE选项卡.html" />
       <item itemvalue="JavaScript Debug.VUE-todoList.html" />
+      <item itemvalue="JavaScript Debug.封装组件-模态框.html" />
+      <item itemvalue="JavaScript Debug.封装组件-tips.html" />
+      <item itemvalue="JavaScript Debug.穿梭框.html" />
+      <item itemvalue="JavaScript Debug.微云.html" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.微云.html" />
         <item itemvalue="JavaScript Debug.VUE-todoList.html" />
-        <item itemvalue="JavaScript Debug.VUE选项卡.html" />
-        <item itemvalue="JavaScript Debug.简易留言板.html" />
+        <item itemvalue="JavaScript Debug.穿梭框.html" />
+        <item itemvalue="JavaScript Debug.封装组件-tips.html" />
+        <item itemvalue="JavaScript Debug.封装组件-模态框.html" />
       </list>
     </recent_temporary>
   </component>
@@ -263,12 +374,17 @@
       <workItem from="1540606145353" duration="7576000" />
       <workItem from="1540689135666" duration="15795000" />
       <workItem from="1540776468922" duration="9864000" />
-      <workItem from="1541031103635" duration="6236000" />
+      <workItem from="1541031103635" duration="7392000" />
+      <workItem from="1541119015670" duration="3388000" />
+      <workItem from="1541151137841" duration="6545000" />
+      <workItem from="1541210509742" duration="8371000" />
+      <workItem from="1541305381490" duration="5893000" />
+      <workItem from="1541399038108" duration="11512000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52279000" />
+    <option name="totallyTimeSpent" value="89144000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -289,7 +405,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3995657" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49947312" weight="0.32899022" />
@@ -383,24 +499,104 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/筛选商品.html">
+    <entry file="file://$PROJECT_DIR$/收缩展开的好友列表.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1825">
-          <caret line="73" column="13" lean-forward="true" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
+        <state relative-caret-position="125">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="72" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/收缩展开的好友列表.html">
+    <entry file="file://$PROJECT_DIR$/网友的面试题.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1200">
-          <caret line="48" column="22" lean-forward="true" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
+        <state relative-caret-position="700">
+          <caret line="28" column="120" selection-start-line="28" selection-start-column="96" selection-end-line="28" selection-end-column="120" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/穿梭框.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" selection-start-line="5" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/各种安装包/《案例+-+Vue.js+打造微云文件管理系统》公开课/《案例 - Vue.js 打造微云文件管理系统》公开课/js/vue.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/各种安装包/《案例+-+Vue.js+打造微云文件管理系统》公开课/《案例 - Vue.js 打造微云文件管理系统》公开课/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="696">
+          <caret line="91" column="91" selection-start-line="91" selection-start-column="87" selection-end-line="91" selection-end-column="91" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/封装组件-tips.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="821">
+          <caret line="55" column="48" selection-start-line="55" selection-start-column="48" selection-end-line="55" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/封装组件-模态框.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="821">
+          <caret line="35" column="23" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/各种安装包/《案例+-+Vue.js+打造微云文件管理系统》公开课/《案例 - Vue.js 打造微云文件管理系统》公开课/index.html.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="220" column="22" lean-forward="true" selection-start-line="220" selection-start-column="22" selection-end-line="220" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/VUE-todoList.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="221" column="42" selection-start-line="221" selection-start-column="42" selection-end-line="221" selection-end-column="42" />
+        <state relative-caret-position="630">
+          <caret line="151" column="20" selection-start-line="151" selection-start-column="12" selection-end-line="151" selection-end-column="20" />
+          <folding>
+            <element signature="e#1448#1853#2" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/筛选商品.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="56" column="12" selection-start-line="56" selection-start-column="4" selection-end-line="56" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="665">
+          <caret line="569" column="18" selection-start-line="569" selection-start-column="18" selection-end-line="569" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/微云.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="285" column="35" lean-forward="true" selection-start-line="285" selection-start-column="35" selection-end-line="285" selection-end-column="35" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#2;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>

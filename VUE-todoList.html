@@ -122,12 +122,13 @@
         <div class="tool" v-show="todoData.length!=0">
             <span class="todo-count">{{activeLength}}个待处理</span>
             <span class="filters">
-                <a href="#all" :class="{selected:now=='all'}"  v-on:click="newNow('all')" >全部</a>
-                <a href="#active" :class="{selected:now=='active'}"    v-on:click="newNow('active')" >待完成</a>
-                <a href="#completed" :class="{selected:now=='completed'}"   v-on:click="newNow('completed')" >已完成</a>
+                <a href="#all" :class="{selected:now=='all'}"  >全部</a>
+                <a href="#active" :class="{selected:now=='active'}"    >待完成</a>
+                <a href="#completed" :class="{selected:now=='completed'}"  >已完成</a>
             </span>
             <span class="clear-completed" @click="clearCompleted" v-show="hasCompleted">清空已完成项</span>
         </div>
+
     </div>
 
 <script>
@@ -188,10 +189,7 @@
                 this.todoData.splice(index,1);
 
             },
-            //当前位置
-            newNow(val){
-                this.now=val;
-            },
+
             editTitle(item){
                 this.editValue=item;
             },
@@ -214,23 +212,23 @@
             },
             //根据HASH来计算数据
             filterList(){
-                list=this.todoData;
-                var filter={
+                var list=this.todoData;
+                var filter ={
 
-                 all:function (list) {
-                    return list;
-                },
-                active:function (list) {
-                    return list.filter(function (item) {
-                        return !item.completed
-                    })
-                },
-                completed: function (list) {
-                    return list.filter(function (item) {
-                        return item.completed
-                    })
-                }
-            }
+                    all:function (list) {
+                        return list;
+                    },
+                    active:function (list) {
+                        return list.filter(function (item) {
+                            return !item.completed
+                        })
+                    },
+                    completed: function (list) {
+                        return list.filter(function (item) {
+                            return item.completed
+                        })
+                    }
+                };
                 return filter[this.now](this.todoData)
             }
         }
@@ -239,9 +237,10 @@
     //获取HASH
     function watchHash(){
         var hash= window.location.hash.slice(1);
-        vm.now=hash;
+        vm.now=hash || 'all';
     }
-    watchHash()
+    watchHash();
+    window.addEventListener('hashchange',watchHash)
 
 </script>
 </body>

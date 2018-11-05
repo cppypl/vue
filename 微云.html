@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body>
+
+    <div class="container" id="app" v-cloak>
+        <!--左侧边栏-->
+        <div class="aside">
+            <h1 class="header">
+                <a href="javascript:;">微云</a>
+            </h1>
+            <ul class="menu-list">
+                <li :class="{cur:showType=='all'}" @click="showWhat('all')">
+                    <a href="javascript:">
+                        <i class="icon icon-all"></i>
+                        <span>全部</span>
+                    </a>
+                </li>
+                <li :class="{cur:showType=='doc'}"  @click="showWhat('doc')">
+                    <a href="javascript:">
+                        <i class="icon icon-doc"></i>
+                        <span>文档</span>
+                    </a>
+                </li>
+                <li  :class="{cur:showType=='pic'}"  @click="showWhat('pic')">
+                    <a href="javascript:">
+                        <i class="icon icon-pic"></i>
+                        <span>图片</span>
+                    </a>
+                </li>
+                <li :class="{cur:showType=='video'}"  @click="showWhat('video')">
+                    <a href="javascript:">
+                        <i class="icon icon-video"></i>
+                        <span>视频</span>
+                    </a>
+                </li>
+                <li  :class="{cur:showType=='music'}" @click="showWhat('music')">
+                    <a href="javascript:">
+                        <i class="icon icon-music"></i>
+                        <span>音乐</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--右侧主区域内容-->
+        <div class="main">
+
+            <!--顶部工具栏-->
+            <div class="toolbar">
+
+                <div class="layout clearfix">
+
+                    <div class="action-wrap action-wrap-upload">
+                        <div class="action-item">
+                            <i class="icon icon-upload-s"></i>
+                            <span class="act-txt">上传</span>
+                        </div>
+                    </div>
+
+                    <div class="action-wrap">
+                        <div class="action-item">
+                            <i class="icon icon-add"></i>
+                            <span class="act-txt">新建</span>
+                        </div>
+                    </div>
+
+                    <div class="action-wrap">
+                        <div class="action-item">
+                            <i class="icon icon-trash"></i>
+                            <span class="act-txt">删除</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!--主体内容-->
+            <div class="main-body">
+
+                <div class="hd">
+
+                    <div class="right clearfix">
+
+                        <div class="action-wrap">
+                            <div class="action-item">
+                                <i class="icon icon-mod-list"></i>
+                                <span class="act-txt">列表</span>
+                            </div>
+                        </div>
+
+                        <div class="action-wrap">
+                            <div class="action-item act">
+                                <i class="icon icon-mode-thumb"></i>
+                                <span class="act-txt">缩略图</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <ul class="breadcrumb clearfix">
+                        <li class="item all">
+                            <a href="javascript:void(0)">全部 </a>
+                        </li>
+                        <li class="item all">
+                            <i class="icon icon-bread-next"></i>
+                            <a href="javascript:void(0)">资料</a>
+                        </li>
+                        <li class="item cur">
+                            <i class="icon icon-bread-next"></i>
+                            <a href="javascript:void(0)" title="视频">视频</a>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="list-wrap">
+
+
+                    <!--列表头部-->
+                    <div class="list-header clearfix">
+
+                        <div class="col checkbox">
+                            <!--icon-checkbox,icon-checkbox-hover,icon-checkbox-cur-->
+                            <input type="checkbox" class="allCheck" v-model="allCheck" @click="all_check">
+                            <i class="icon icon-checkbox"></i>
+                        </div>
+
+                        <div class="col col-border name" style="display: block;">
+                            <strong>全选</strong>
+                        </div>
+
+                        <div class="col col-border info" style="display: none;">
+                            已选择 ? 项
+                        </div>
+
+                    </div>
+                    <!--列表头部end-->
+
+                    <!--正文，缩略图-->
+                    <div class="list-item-wrap list-item-wrap-thumb">
+
+                        <ul class="list-item clearfix">
+
+                            <li class="item" v-for="item in dirList">
+                                <div class="inner">
+                                    <i class="icon-wrapper">
+                                        <i class="icon icon-file-l"></i>
+                                    </i>
+                                    <span title="a4" class="txt">{{item.name}}</span>
+
+                                </div>
+                                <input type="checkbox" class="toggle" v-model='item.checked' @click="isAllCheck" />
+                                <i class="icon checkbox icon-checkbox"></i>
+                            </li>
+
+                        </ul>
+
+                        <ul class="figure-item clearfix">
+                            <li class="figure-list-item" v-for="item in otherList">
+                                <div class="figure-list-item-inner">
+                                    <input type="checkbox" class="toggle" v-model='item.checked' @click="isAllCheck" />
+                                    <i class="icon checkbox icon-checkbox"></i>
+                                    <div class="figure-list-item-pic">
+                                        <div class="img-wrapper">
+                                            <i class="icon icon-l icon-zip-l"></i>
+                                        </div>
+                                    </div>
+                                    <div class="figure-list-item-txt">
+                                        <p class="tit">
+                                            {{item.name}}
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <!--列表模式-->
+                    <div class="list-item-wrap list-item-wrap-list clearfix">
+                        <div class="row clearfix">
+                            <div class="col checkbox-wrap">
+                                <!--icon-checkbox,icon-checkbox-hover,icon-checkbox-cur-->
+                                <i class="icon checkbox icon-checkbox-cur"></i>
+                            </div>
+
+                            <div class="col col-border name">修改时间</div>
+                        </div>
+                        <!--选中：cur-->
+                        <div class="row cur clearfix">
+                            <div class="col checkbox-wrap">
+                                <!--icon-checkbox,icon-checkbox-hover,icon-checkbox-cur,icon-checkbox-cur2(反色)-->
+                                <i class="icon checkbox icon-checkbox-cur2"></i>
+                            </div>
+
+                            <div class="col col-border name">修改时间</div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <!--画框-->
+    <div class="draw-selector" ></div>
+
+<script>
+   let dataList=[
+       {
+           name:'Javascript',
+           type:''
+       },
+       {
+           name:'CSS3',
+           type:''
+       },
+       {
+           name:'HTML5',
+           type:''
+       },
+       {
+           name:'NodeJs',
+           type:''
+       },
+       {
+           name:'index.html',
+           type:'html'
+       },
+       {
+           name:'压缩包.rar',
+           type:'rar'
+       },
+       {
+           name:'一千年以后.mp3',
+           type:'mp3'
+       },
+       {
+           name:'NodeJs视频.mp4',
+           type:'mp4'
+       },
+       {
+           name:'风景照.png',
+           type:'png'
+       },
+       {
+           name:'自拍.jpg',
+           type:'jpg'
+       }
+   ];
+   dataList.forEach(item => item.checked=false);
+   let vm = new Vue({
+       el:"#app",
+       data:{
+           dataList,
+           showType:'all',
+           MIMEMAPS: {
+               doc: ['html','rar'],
+               pic: ['png', 'jpg'],
+               music: ['mp3'],
+               video: ['mp4']
+           },
+           allCheck:''
+       },
+       methods:{
+           showWhat(type){
+                this.showType=type
+           },
+           all_check(){
+               return this.dataList.forEach(item => item.checked=!this.allCheck);
+           },
+           isAllCheck(){
+               var state=this.dataList.every(item => item.checked);
+               console.log(state)
+               this.allCheck= state
+           }
+       },
+       computed:{
+           dirList(){
+               return  this.showType=='all' ?  this.dataList.filter(item=>item.type=='') : []
+           },
+           otherList(){
+               let otherList= this.dataList.filter(item=>item.type!='');
+               if(this.showType=='all'){
+                   return otherList
+               }else{
+                   return otherList.filter(file => this.MIMEMAPS[this.showType].includes(file.type) )//includes在数组中找到同样的值返回true或者false
+               }
+           }
+       }
+   });
+
+</script>
+
+</body>
+</html>

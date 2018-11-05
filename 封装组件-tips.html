@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        *{ margin: 0; padding: 0}
+        body{background: #999}
+        .tips{width: 800px; padding: 20px; background: #09f; margin: 50px auto; color: #fff}
+        .tips .close{            float: right;}
+        .info{ background:#09f}
+        .success{ background:green }
+        .error{ background:red}
+        .warning{ background:#f60}
+    </style>
+</head>
+<body>
+
+<div id="app">
+    <tips  ></tips>
+    <tips class_name="success" :close_able="false"></tips>
+    <tips class_name="error" con="出错了" ></tips>
+    <tips class_name="warning" con="警告" @on-close="closeThis">哈哈哈哈哈哈哈哈哈哈或或或或</tips>
+
+</div>
+
+<script>
+    Vue.component('tips',{
+        props:{
+            class_name:{
+                type:String,
+                default:'info'
+            },
+            con:{
+                type:String,
+                default: '默认提示'
+            },
+            close_able:{
+                type:Boolean,
+                default:true
+            }
+        },
+        template:`
+            <div class="tips" :class="[class_name]">
+                <i class="icon">{{class_name}}</i>
+                <slot>
+                    <span>{{con}}</span>
+                </slot>
+                <i class="close" v-if="close_able" @click="closeHandle">X</i>
+            </div>
+        `,
+        methods:{
+            closeHandle:function () {
+                alert('触发了')
+                this.$emit('on-close');//on-ok的方法传给父级，父级则使用@on-ok='fn'
+            }
+
+
+        }
+    });
+    new Vue({
+        el:"#app",
+        data:{
+            list:[...'试试新学的组件定制']
+        },
+        methods:{
+            closeThis(){
+                alert('点了关闭')
+            }
+        }
+
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        *{ margin: 0; padding: 0}
+        body{background: #999}
+        .modal{width: 800px; margin: 50px auto ; background: #fff; padding:  20px }
+        .modal h3{ font-size: 18px; border-bottom: 1px #ddd solid; padding: 10px 20px }
+        .modal .content{  padding: 10px 20px ; font-size: 18px; color: #666}
+        .modal .foot{text-align: right}
+        .modal .foot a{ display: inline-block; padding: 10px 40px;margin-right: 10px; text-decoration: none}
+        .modal .foot .ok{background: #09f; color:#fff}
+        .modal .foot .no{background: #999; color: #333}
+    </style>
+</head>
+<body>
+
+    <div id="app">
+        <modal modal_title="定制标题"></modal>
+        <modal @on-ok="ok">
+
+            <ul>
+                <li v-for="item in list">{{item}}</li>
+            </ul>
+        </modal>
+
+
+    </div>
+
+<script>
+    Vue.component('modal',{
+        props:{
+            modal_title:{
+                type:String,
+                default:'默认标题'
+            }
+        },
+        template:`
+            <div class="modal">
+                <h3>{{modal_title}}</h3>
+                <div class="content">
+                    <slot>默认内容</slot>
+                </div>
+                <div class="foot">
+                    <a href="javascript:" class="ok" @click="okHandle">确定</a>
+                    <a href="javascript:" class="no">取消</a>
+                </div>
+            </div>
+        `,
+        methods:{
+            okHandle:function () {
+                alert('触发了')
+                this.$emit('on-ok');//on-ok的方法传给父级，父级则使用@on-ok='fn'
+            }
+
+
+        }
+    });
+    new Vue({
+        el:"#app",
+        data:{
+            list:[...'试试新学的组件定制']
+        },
+        methods:{
+            ok(){
+                alert('点了OK')
+            }
+        }
+
+    });
+
+</script>
+</body>
+</html>
