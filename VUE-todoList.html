@@ -167,11 +167,14 @@
         methods:{
             /*添加一项*/
             addList (){
-                this.todoData.push({
-                    title:this.addValue,
-                    completed:false
-                });
-                this.addValue=''
+                if(this.addValue!=''){
+                    this.todoData.push({
+                        title:this.addValue,
+                        completed:false
+                    });
+                    this.addValue=''
+                }
+                
             },
 
 

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .selecter {
+        width: 500px;
+        margin: 50px auto;
+        background: #eee;
+      }
+      .selecter li {
+        font-size: 18px;
+        list-style: none;
+        cursor: pointer;
+        padding: 20px;
+      }
+      .selecter li:hover {
+        background: #ddd;
+      }
+      .selecter input {
+        font-size: 24px;
+        padding: 20px 0;
+        text-indent: 20px;
+        width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+            <my-select :list="citylist"></my-select>
+    </div>
+
+    <script>
+
+        //父组件 my-select
+      Vue.component("my-select", {
+        props: ["list"],
+        data: function() {
+          return {
+            value: "",
+            showState: false
+          };
+        },
+        template: `
+                         <div class="selecter">
+                            <input type="text" v-model="value" @focus="showState=true" placeholder="请选择">
+                            <city :list="list" v-on:changeVal="change" v-show="showState"></city>
+                        </div>
+                    `,
+        methods: {
+          change(val) {
+            this.value = val;
+            this.showState = false;
+          }
+        }
+      });
+
+
+      //子组件 my-select 里面的ul,
+      Vue.component("city", {
+        props: ["list"],
+        template: `
+                             <ul>
+                                <li v-for="item in list" @click="alertval(item)">{{item}}</li>
+                            </ul>
+                    `,
+        methods: {
+          alertval(val) {
+            this.$emit("changeVal", val);   //$emit上父级传递一个自定义事件changeVal,并且传值给父级。
+          }
+        }
+      });
+
+      new Vue({
+        el: "#app",
+        data: {
+          citylist: ["北京", "深圳", "上海", "成都"]
+        }
+      });
+
+      
+    </script>
+  </body>
+</html>
