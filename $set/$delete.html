@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<body>
+    
+
+    <div id="app">
+
+        <p v-for="(item, index) in list" :key="index">{{item}}</p>
+
+        <button @click='add'>add</button>
+    </div>
+
+    <script>
+    
+    let vm=new Vue({
+        el:"#app",
+        data:{
+
+            list:{
+                name:'pol',
+                age:22,
+                sex:'man'
+            }
+        },
+        methods:{
+
+            add(){
+                this.list.msg='test';  //这里虽然添加了，但由于不会更新视图，所以看不见变化
+                
+                this.$set(this.list, 'job', 'coder')  //$set/$delete都有更新视图的功能，所以上面的msg也会渲染
+            }
+        }
+    })
+    </script>
+</body>
+</html>
