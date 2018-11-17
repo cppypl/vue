@@ -49,7 +49,7 @@
         `,
         data(){
             return {
-                all_check:''
+                all_check:false
             }
         },
         computed:{
@@ -59,7 +59,13 @@
         },
         methods:{
             all_handle(){
-                this.data.map(item => item.checked=!this.all_check)
+                
+                     
+                this.$nextTick( () => { 
+
+                    this.data.map(item => item.checked=this.all_check)
+                
+                })
             }
         }
     });

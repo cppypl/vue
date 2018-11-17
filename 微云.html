@@ -271,19 +271,24 @@
                music: ['mp3'],
                video: ['mp4']
            },
-           allCheck:''
+           allCheck:false
        },
        methods:{
            showWhat(type){
                 this.showType=type
            },
            all_check(){
-               return this.dataList.forEach(item => item.checked=!this.allCheck);
+               this.$nextTick(()=>{
+                  this.dataList.forEach(item => item.checked=this.allCheck);
+               });
+              
            },
            isAllCheck(){
+            this.$nextTick(()=>{
                var state=this.dataList.every(item => item.checked);
                console.log(state)
                this.allCheck= state
+            });
            }
        },
        computed:{

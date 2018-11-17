@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="container">
+		<!-- 单个多选框，值在true和false之间变换-->
+		<input type="checkbox" v-model = "status"  name="singleBox" value="single" @click="alert">
+		<label for="JS">{{status}}</label>
+		<!-- 多个多选框 ，绑定的是数组，数组会变化-->
+		<div class="options">
+			<input type="checkbox" v-model= "checkArray" name="check" value="JavaScript">
+			<label>JavaScript</label>
+		</div>
+		<div class="options">
+			<input type="checkbox" v-model= "checkArray" name="check" value="Html">
+			<label>Html</label>
+		</div>
+		<div class="options">
+			<input type="checkbox" v-model= "checkArray" name="check" value="Css">
+			<label>Css</label>
+		</div>
+		<p>当前的数组中还剩下：{{arrayValue}}</p>
+	</div>
+
+
+    <script>
+    
+    var myApp = new Vue({
+			el:"#container",
+			data:{
+				checkArray:["JavaScript","Html","Css","PHP"],
+				status:true
+			},
+			computed:{
+				arrayValue:function(){
+					return this.checkArray.join(",")
+				}
+            },
+            methods:{
+                alert(e){
+                    this.$nextTick( () => {
+                        console.log(this.status)
+                    })
+                }
+            }
+		})
+
+    </script>
+
+</body>
+</html>
